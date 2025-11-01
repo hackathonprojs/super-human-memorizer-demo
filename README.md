@@ -1,14 +1,17 @@
-# 📝 Writer / Rewriter API Playground
+# Try it out at https://hackathonprojs.github.io/super-human-memorizer-demo/
 
-A demo application showcasing Chrome's built-in Writer and Rewriter APIs powered by Gemini Nano. This playground allows you to experiment with AI-powered text generation and rewriting capabilities directly in your browser.
+# 📝 Super Human Memorizer
+
+A simple app that helps you memorize arbitrary word lists by turning them into a vivid short story that includes every word you provide. Built on Chrome's built‑in Writer and Rewriter APIs running locally with Gemini Nano.
 
 ## Features
 
-- **Writer API**: Generate text based on prompts and context
-- **Rewriter API**: Modify existing text by adjusting tone or length
-- **Streaming responses**: Real-time text generation
-- **Context-aware**: Provide shared context for better results
-- **Secure**: Runs entirely in your browser with no external API calls
+- **Story generator**: Weaves in all 12–24 input words into one coherent story
+- **Randomizer**: One‑click random 12–24 word list generator
+- **Optional style**: Hint genres like fantasy, sci‑fi, noir, history, etc.
+- **Rewrite length**: Quickly make the output shorter/longer or keep as‑is
+- **Streaming responses**: Real‑time output as the story is written
+- **Local and private**: Runs in your browser; no external API calls
 
 ## Requirements
 
@@ -22,7 +25,7 @@ A demo application showcasing Chrome's built-in Writer and Rewriter APIs powered
 1. Clone this repository:
    ```bash
    git clone <repository-url>
-   cd writer-rewriter-api-playground
+   cd super-human-memorizer-demo
    ```
 
 2. Install dependencies:
@@ -32,9 +35,9 @@ A demo application showcasing Chrome's built-in Writer and Rewriter APIs powered
 
 ## Usage
 
-For "Option 1: Use a Secure Local Server," the recommended and simplest method for modern web development is to use a tool called **mkcert** to generate a locally trusted SSL certificate and then configure a local web server to use it.
+For local development over HTTPS, the recommended and simplest method is to use **mkcert** to generate a locally trusted SSL certificate and then configure a local web server to use it.
 
-This process ensures your local site is served over **HTTPS** (e.g., `https://localhost:8080`), which is the **secure context** required for the Writer/Rewriter API.
+This process ensures your local site is served over **HTTPS** (e.g., `https://localhost:8080`), which is the **secure context** required for Chrome's built‑in AI (Writer/Rewriter API).
 
 Here are the step-by-step instructions:
 
@@ -102,7 +105,7 @@ You need a simple local server to serve your files and tell it to use the new ce
       * The server will typically start on port **8080** by default.
       * Open your browser and navigate to: **`https://localhost:8080`**
 
-You should now see the page load with a secure padlock icon, and the Writer/Rewriter API should be available because the page is running in a **secure context**.
+You should now see the page load with a secure padlock icon, and the app's AI features (Writer/Rewriter API for Chrome Built-in AI) should be available because the page is running in a **secure context**.
 
 -----
 
@@ -119,18 +122,16 @@ You should now see the page load with a secure padlock icon, and the Writer/Rewr
    ```
    (The application will automatically redirect to HTTPS if needed)
 
-3. **Writer Mode**:
-   - Enter a prompt (e.g., "Write an email to my bank")
-   - Optionally add context for better results
-   - Click "📝 Write" to generate text
+3. **Generate Story**:
+   - Enter 12–24 words into the input field (live counter helps you stay in range)
+   - Optionally set a style (e.g., fantasy, sci‑fi, noir, history, inspirational)
+   - Click "📝 Generate Story" to create a story that includes every word
 
-4. **Rewriter Mode**:
-   - After generating text, use the rewrite options to:
-     - Adjust tone (more formal/casual)
-     - Change length (shorter/longer)
-   - Click "♻️ Rewrite" to regenerate
+4. **Rewrite Length**:
+   - Use the length control to keep as‑is, make it shorter, or make it longer
+   - Click "♻️ Rewrite" to apply the length change
 
-5. **Copy Results**: Use the "📋 Copy" button to copy generated text to clipboard
+5. **Copy Results**: Use the "📋 Copy" button to copy the story to the clipboard
 
 ## Browser Setup
 
@@ -149,8 +150,8 @@ To enable the Writer/Rewriter API:
 
 The application uses Chrome's experimental built-in AI APIs:
 
-- **Writer API**: Creates an AI writer instance with configurable tone, length, and format options
-- **Rewriter API**: Creates an AI rewriter instance to modify existing text
+- **Writer API**: Generates the short story, ensuring all provided words are incorporated
+- **Rewriter API**: Adjusts the story's length while keeping content faithful
 - **Streaming**: Both APIs support streaming responses for real-time text generation
 - **DOMPurify**: Sanitizes output to prevent XSS attacks
 
@@ -174,3 +175,4 @@ Thomas Steiner ([@tomayac](https://github.com/tomayac/))
 - [Chrome Built-in AI Documentation](https://developer.chrome.com/docs/ai/built-in)
 - [Web AI Demos on GitHub](https://github.com/GoogleChromeLabs/web-ai-demos)
 - [Join Early Preview Program](https://goo.gle/chrome-ai-dev-preview-join)
+
