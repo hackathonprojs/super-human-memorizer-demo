@@ -86,6 +86,14 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   gap: 1rem;
 }
 
+.write-form .wrapper {
+  padding: 12px;
+}
+
+.rewrite-form .wrapper {
+  padding: 12px;
+}
+
 textarea#prompt {
   min-height: 7rem;
 }
